@@ -1,0 +1,362 @@
+body{
+    background-color : #8dd2dd;
+    font-size: 18px;
+}
+main{
+    font-size:14px;
+}
+
+h1{
+    font-size:48px;
+    text-align: center;
+    font-family: "Pixelify Sans", Georgia;
+
+    text-decoration: underline;
+    padding-top:50px;
+    margin-bottom: 20px;
+
+}
+
+h2{
+    font-size: 20px;
+    font-family:Georgia;
+    text-align: center;
+}
+
+h3{
+    font-size:18px;
+    font-weight: bold;
+}
+
+p{
+    line-height: 35px;
+}
+
+img{
+    border: solid 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+nav li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+nav{
+    border: 2px solid black;
+    background-color: bisque;
+    display:grid;
+    position:fixed;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    width:100%;
+}
+.secondAnimation{
+    visibility: hidden;
+}
+
+#skip{
+    color: black;
+    
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+
+    position: absolute;
+    top: -40px;
+
+}
+
+#skip:focus{
+    top: 20px; 
+    border: solid black 2px;
+}
+
+*:focus{
+    border: solid black2px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px black solid;
+    grid-gap: 0px;
+}
+.container>img{
+    border:2px solid black;
+    height: 80px;
+    padding:0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+nav li > a{
+    color: black;
+    text-decoration: none;
+}
+
+.animation{
+    width:50px;
+    height:50px;
+    position: relative;
+    left:75%;
+    border:5px solid green;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-color:aquamarine;
+
+    animation:3.5s;
+    animation-name:fireball;
+}
+
+@keyframes fireball{
+    0% {background-color:coral; border:5px solid red; left:25%;}
+    100% {background-color:aquamarine; border:5px solid green; left:75%;}
+}
+
+top{
+    visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animation{
+        animation:none;
+    }
+
+    .gif{
+        display:none;
+    }
+
+    top{
+        visibility: hidden;
+    }
+
+    .secondAnimation{
+        visibility: hidden;
+    }
+    
+
+}
+
+subnav{
+    visibility: hidden;
+}
+
+.BREAKER{
+    visibility: hidden;
+}
+.finalDiv{
+    visibility: hidden;
+}
+
+@media viewport, screen and (min-width: 810px){
+    
+    .locationcontainer{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    figcaption{
+        text-align: center;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    nav{
+        height:10%;
+    }
+
+    subnav{
+        visibility: visible;
+        border: 2px solid black;
+        background-color: bisque;
+        display:grid;
+        position:fixed;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        width:100%;
+    }
+    .BREAKER{
+        
+        height:50px;
+    }
+
+    top{
+        visibility: visible;
+        position:fixed;
+        border:black solid 2px;
+        border-radius: 100px;
+        background-color: orange;
+        text-align: center;
+        
+        top: 85%;
+        left: 90%;
+        margin-top: -50px;
+        margin-left: -50px;
+        width: 100px;
+        height: 100px;
+        
+        font-size:24px;
+    }
+    
+    top:hover{
+        background-color:darkorange;
+        cursor:pointer;
+    }
+    
+    
+}
+
+@media viewport, screen and (min-width: 1200px){
+    nav :hover {
+        border-top:black solid 4px;
+        border-right:black solid 4px;
+        border-left:black solid 4px;
+    }
+
+    subnav :hover{
+        border-top:black solid 2px;
+        border-right:black solid 2px;
+        border-left:black solid 2px;
+    }
+
+    img:hover{
+        border:white solid 2px;
+    }
+    desk-contain{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    desk-contain >div{
+        border:2px solid black;
+        border-radius: 20px;
+        padding:5px;
+
+    }
+
+    #maina>:first-child{
+        
+        width:100%;
+        height:500px;
+        background-attachment: fixed;
+        background-image: url("../images/pets.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: 0 0 ;
+    }
+    #mainb>:first-child{
+        width:100%;
+        height:500px;
+        background-attachment: fixed;
+        background-image: url("../images/travel.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: 0 0 ;
+    }
+    #mainc>:first-child{
+        width:100%;
+        height:500px;
+        background-attachment: fixed;
+        background-image: url("../images/recipes.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: 0 0 ;
+    }
+
+    top{
+        top: 90%;
+        left: 95%;
+    }
+    
+    .finalDiv{
+        visibility: visible;
+    }
+
+    .secondAnimation{
+        visibility: visible;
+        border:none;
+        position:relative;
+
+        width:70px;
+        background-image: url("../images/pizza-icon.png");
+        left:75%;
+
+        animation: 6s;
+        animation-name:pizza;
+        animation-iteration-count: infinite;
+
+    }
+
+    .secondAnimation:hover{
+        border:none;
+        
+    }
+    
+    @keyframes pizza{
+        0% {rotate:0deg; left:0%;}
+        50% {rotate:360deg;left:90%;}
+        100% {rotate:0deg;left:0%;}
+    }
+
+    .pizzaMakerTitle{
+        text-align: center;
+        font-size: 52px;
+    }
+
+    .pizzaTitle{
+        padding-top:30px;
+        font-size:32px;
+    }
+    
+
+    fieldset{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border:1px black dashed;
+    }
+
+    .in{
+        padding-top:10px;
+        font-size: 20px;
+    }
+
+    .pizzaOutput{
+        font-size: 32px;
+        padding-top:30px;
+    }
+
+    .check{
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #BAA24A;
+        border: 2px solid #FFE380;
+        padding: 10px;
+        border-radius: 100px;
+        position: relative;
+    }
+    legend{
+        font-size: 30px;
+        
+    }
+    
+    .check:checked{
+        background-color: #b21807;
+    }
+}
